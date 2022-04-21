@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rros.FitnessChartController">
+   <children>
+      <Button id="btnClose" fx:id="btnClose" layoutX="515.0" layoutY="355.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="31.0" prefWidth="71.0" text="Close">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <LineChart id="chart" fx:id="chart" title="Fitness by Generation">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

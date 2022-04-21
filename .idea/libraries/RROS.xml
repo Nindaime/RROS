@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="RROS">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/RROS.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

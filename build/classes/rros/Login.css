@@ -1,0 +1,249 @@
+.container{
+    -fx-background-image: url("Map.jpg");
+    -fx-background-size: cover;
+}
+.background {
+    
+	-fx-background-image: url("CoarseGrid.png");
+        
+	-fx-background-repeat: repeat;
+	
+	-fx-background-color:
+ linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+ linear-gradient(#20262b, #191d22),
+ radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+        -fx-padding: 0;
+        -fx-margin: 0;
+}
+.top-segment {
+        -fx-background-color: rgba(255, 255, 255, 0.05);
+	-fx-border-color: transparent transparent rgba(255, 255, 255, 0.08) transparent, transparent transparent rgba(0, 0, 0, 0.5) transparent;
+	-fx-border-width: 1, 1.5;
+	-fx-border-insets: -1, 0; 
+}
+.tab-header-background{
+    -fx-background-color: transparent;
+}
+.tab-content-area{
+	-fx-border-color: rgba(255, 255, 255, 0.08) transparent transparent transparent, rgba(0, 0, 0, 0.5) transparent transparent transparent;
+	-fx-border-width: 1, 1.5;
+	-fx-border-insets: -1, 0; 
+        -fx-background-color: rgba(255, 255, 255, 0.09);
+}
+.tab-label{
+    -fx-font: 15 "Signika";
+    -fx-text-fill: whitesmoke;
+}
+.tab:hover .tab-label{-fx-text-fill: black;}
+.tab{ -fx-background-color: rgba(255, 255, 255, 0.45);}
+.tab:hover{
+    -fx-cursor: hand;
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+}
+#no-color{-fx-padding: 0px; }
+#label2 {
+	-fx-font: 22 "Signika";
+	-fx-text-fill: rgba(255, 255, 255, 0.4);
+	-fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1);
+}
+.profileTitle {	-fx-font-size: 18;}
+
+.hyperlink {
+    
+	-fx-font: 18 "Arial";
+	-fx-text-fill: rgb(255, 255, 255, 0.4);
+	-fx-effect: dropshadow( one-pass-box , rgb(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+	-fx-border-width: 0;
+}
+
+.hyperlink:focused { 	-fx-text-fill: rgb(255, 255, 255, 0.6); }
+
+.check-box .box {
+	-fx-background-color: rgb(255, 255, 255, 0.1), rgb(0, 0, 0, 1), -fx-outer-border, -fx-inner-border, -fx-body-color;
+	-fx-background-insets: 0 -1.6 -2 -1.6, -1.4, 0, 1, 2;
+}
+
+.check-box:focused .box {
+	-fx-background-color: rgb(255, 255, 255, 0.15), rgb(0, 0, 0, 0.8), -fx-outer-border, -fx-inner-border, white;
+}
+
+.button .text {
+	-fx-effect: dropshadow( one-pass-box , rgb(0, 0, 0, 0.8), 0, 0.0 , 0 , -1 );
+}
+
+.button {
+	-fx-background-color: rgb(255, 255, 255, 0.08),	rgb(0, 0, 0, 0.8), #090a0c,
+ linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+ linear-gradient(#242a2e, #23282e),
+ radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+ rgba(255,255,255,0));
+	-fx-background-radius: 7, 6, 5, 4, 3, 5;
+	-fx-background-insets: -3 -3 -4 -3, -3, 0, 1, 2, 0;
+	-fx-font: 26 "Arimo";
+	-fx-text-fill: linear-gradient(white, #d0d0d0);
+	-fx-padding: 10 20 10 20;
+}
+
+#btnClose{
+    -fx-padding: 5 10 5 10;
+    -fx-font: 18 "Arimo";
+}
+
+.button.btn-logout{
+    -fx-font: 20 "Arimo";
+    -fx-padding: 0;
+    -fx-background-radius: 0;
+}
+
+.button:focused, .button:hover {
+	-fx-background-color:
+ rgb(255, 255, 255, 0.08),
+ rgb(0, 0, 0, 0.8),
+ #090a0c,
+ linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+ linear-gradient(#3f4950, #23282e),
+    radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+  rgba(255,255,255,0));
+}
+
+.text-field, .text-area {
+	-fx-background-color:
+ rgb(255, 255, 255, 0.3), linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.8) 50%),
+ rgb(218, 226, 224);
+
+	-fx-background-insets: 0 0 -1 0, 0, 1.5;
+	-fx-background-radius: 6, 5, 4;
+	-fx-padding: 6 10 4 10;
+	-fx-effect: innershadow( gaussian, rgb(0, 0, 0, 0.8), 5, 0, 0, 2 );
+
+	-fx-font: 18 "Arimo";
+}
+
+.text-area {
+	-fx-padding: 6 5;
+	-fx-background-radius: 40px !important;
+}
+
+.text-field:focused, .text-area:focused {
+   
+	-fx-prompt-text-fill:
+ rgb(128,128,128);
+  
+	-fx-background-color:
+ rgb(235, 235, 235, 0.5),
+ rgb(0, 0, 0, 0.4),
+ rgb(255, 255, 255);
+
+}
+#content .label{
+    -fx-text-fill: white;
+}
+.scroll-pane > .viewport{
+    -fx-blend-mode: soft-light;
+    -fx-background-color: transparent;
+}
+.scroll-pane{
+    -fx-background-color: transparent;
+}
+.date-picker-popup .button{
+    -fx-padding: 0 6;
+}
+.date-picker-popup .label{
+    -fx-font: 16 "Cambria";
+    -fx-padding: 0 5;
+}
+.date-picker > .text-field{ -fx-font: 14 "arimo"; }
+.date-picker > .arrow-button{
+    -fx-background-color:  linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%), linear-gradient(#20262b, #191d22);
+}
+.combo-box{
+    -fx-background-color:  linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%), linear-gradient(#20262b, #191d22);
+    -fx-border-color:  transparent transparent rgba(255, 255, 255, 0.08) transparent,transparent transparent rgba(0, 0, 0, 0.5) transparent;
+    -fx-border-width: 1;
+}
+.combo-box > .list-cell{
+    -fx-font: 12 "Signika";
+    -fx-text-fill: lightgrey;
+}
+.combo-box-popup .list-view .list-cell{
+	-fx-background-color: white; 
+}
+.combo-box-popup .list-view .list-cell:hover{
+    -fx-background-color: lightgrey;
+    -fx-cursor: hand;
+}
+.combo-box-popup .label{
+    -fx-pref-height: 25;
+    -fx-alignment: center;
+}
+.combo-box-popup .labelLeft{
+    -fx-text-fill: gainsboro;
+    -fx-pref-width: 57;
+    -fx-font: bold 12 'arimo';
+    -fx-background-color: #4B535E;
+}
+.combo-box-popup .failed .labelLeft{
+    -fx-background-color:  derive(orangered, -10%);
+    -fx-text-fill: gainsboro;
+}
+.combo-box-popup .labelCenter{
+    -fx-text-fill: #4B535E;
+    -fx-background-color: gainsboro;
+    -fx-pref-width: 295;
+    -fx-font: lighter 16 'Calibri';
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 0 5;
+}
+.combo-box-popup .failed .labelCenter{
+    -fx-text-fill: derive(orangered, -10%);
+}
+.combo-box-popup .labelRight{
+    -fx-font: bold 16 'Calibri';
+    -fx-background-color: #4B535E;
+    -fx-text-fill: gainsboro;
+    -fx-pref-width: 100;
+}
+.combo-box-popup .failed .labelRight{
+    -fx-background-color:  derive(orangered, -10%);
+    -fx-text-fill: gainsboro;
+}
+.combo-box-popup .list-cell:hover .label{
+    -fx-border-color: white;
+}
+.combo-box-popup .list-cell:hover .labelLeft{
+    -fx-border-width: 2 0 2 2;
+}
+.combo-box-popup .list-cell:hover .labelRight{
+    -fx-border-width: 2 2 2 0;
+}
+.combo-box-popup .list-cell:hover .labelCenter{
+    -fx-border-width: 2 0 2 0;
+}
+.table-cell{
+    -fx-border-color: transparent;
+}
+.table-view *{
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+    -fx-background-color: linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%), linear-gradient(#20262b, #191d22);
+}
+.table-view .table-column{
+    -fx-alignment: center;
+}
+.table-view {
+    -fx-background-color:  linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%), linear-gradient(#20262b, #191d22);
+    -fx-blend-mode: soft-light;
+}
+.hyperlink-button{
+    -fx-background-color: derive(lightgrey,-20%);
+    -fx-background-radius: 100%;
+    -fx-border-radius: 100%;
+    -fx-padding: 0;
+}
+.hyperlink-button:hover{   -fx-background-color: lightgrey;}
+.course-reg-button{
+    -fx-font-size: 16;
+}
+.course-reg-textfield{
+    -fx-font-size: 14;
+}

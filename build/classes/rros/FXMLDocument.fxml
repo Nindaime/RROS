@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="container" fx:id="container" onMouseClicked="#getCoordinate" prefHeight="650.0" prefWidth="740.0" style="-fx-border-color: black;" styleClass="container" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rros.FXMLDocumentController">
+   <children>
+      <AnchorPane id="topPane" fx:id="topPane" layoutX="2.0" layoutY="2.0" onMouseClicked="#requestfocus" onMouseDragged="#pick" onMouseEntered="#reveal" onMouseExited="#hide" onMousePressed="#determine" onMouseReleased="#drop" prefHeight="88.0" prefWidth="736.0" style="-fx-background-color: #5F6E7B;" styleClass="background">
+         <children>
+            <Pane layoutX="14.0" layoutY="5.0" prefHeight="76.0" prefWidth="71.0" style="-fx-border-radius: 100%; -fx-background-radius: 100%; -fx-border-color: #5F6E7B; -fx-background-color: white;">
+               <children>
+                  <ImageView id="profileImage" fx:id="profileImage" fitHeight="55.0" fitWidth="43.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 100%;">
+                     <image>
+                        <Image url="@../../../../../Desktop/face3.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label id="username" fx:id="username" layoutX="96.0" layoutY="11.0" text="Username" textFill="WHITE">
+               <font>
+                  <Font name="Arimo" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow color="WHITE" height="5.0" radius="2.0" width="5.0" />
+               </effect>
+            </Label>
+            <Button id="btnlogout" fx:id="btnLogout" layoutX="633.0" layoutY="47.0" mnemonicParsing="false" onAction="#logout" onMouseEntered="#hover_in" onMouseExited="#hover_out" prefHeight="31.0" prefWidth="89.0" style="-fx-background-color: #324252; -fx-border-color: darkgrey; -fx-border-width: 3; -fx-border-insets: 0;" styleClass="btn-logout" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Arimo" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="btnClose" fx:id="btnClose" cancelButton="true" layoutX="681.0" layoutY="4.0" mnemonicParsing="false" onAction="#closeButtonAction" onMouseEntered="#hover_in" onMouseExited="#hover_out" prefHeight="34.0" prefWidth="49.0" style="-fx-background-color: transparent;" styleClass="btn-logout">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView id="close-button" fitHeight="28.0" fitWidth="66.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@closeImage.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust saturation="-1.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow color="#2d4154" height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+            <TextField fx:id="searchField" alignment="CENTER" focusTraversable="false" layoutX="96.0" layoutY="47.0" prefHeight="28.0" prefWidth="275.0" promptText="Enter Search Parameter" style="-fx-background-radius: 10;" visible="false">
+               <font>
+                  <Font name="Arimo" size="14.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#256990c4" height="11.35" offsetX="1.0" offsetY="1.0" radius="2.3375" width="0.0" />
+               </effect>
+            </TextField>
+         </children>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </AnchorPane>
+      <ProgressBar id="pBar" fx:id="pBar" layoutX="9.0" layoutY="625.0" prefHeight="18.0" prefWidth="223.0" progress="0.0" />
+      <Label id="pBarLabel" fx:id="pBarLabel" layoutX="11.0" layoutY="608.0" text="Generating 0 TCPs as Individuals...0%" />
+      <Pane id="tbContainer" layoutX="590.0" layoutY="450.0">
+         <children>
+            <TableView id="tbView" fx:id="tbView" prefHeight="176.0" prefWidth="137.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
